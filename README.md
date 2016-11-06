@@ -16,7 +16,7 @@ The input sets used are:
 **Language** - Python  
 **Spark APIs used** - *groupBy, join, map, filter, reduce* (pySpark)  
 
-Number of master nodes - 1  (Localhost:8080)
+Number of master nodes - 1  (Localhost:8080)  
 Number of slave nodes - 2 (Based on the number of cores, NUMBER_OF_INSTANCES = 2)  
 
 Implementation file names  
