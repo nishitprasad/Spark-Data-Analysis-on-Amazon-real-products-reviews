@@ -37,7 +37,7 @@ joinedRDD = sc.parallelize(sorted(metaRDD.join(reviewRDD).collect())) #sorted le
 joinedRDD.saveAsTextFile("file:///home/../joinedRDD_result") # save file to a local path, starting with prefix file://
 joinedRDD = joinedRDD.map(lambda line: int(line[1][1])) #Map this RDD with new RDD containing just the wordcounts
 
-#Calculate the total sum and count to calculate the average review wordcount
+#Calculate the total sum and count to calculate the average review wordcount, store the result in a text file
 totalSum = joinedRDD.reduce(add)
 count = joinedRDD.count()
 with open('AverageNumberOfReviewWords.txt', 'w') as f:
