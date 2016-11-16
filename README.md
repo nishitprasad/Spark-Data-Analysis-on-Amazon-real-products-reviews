@@ -125,7 +125,7 @@ else
     totalSum = joinedRDD.reduce(add)
     count = joinedRDD.count()
     with open('AverageNumberOfReviewWords.txt', 'w') as f:
-    f.write("Total Sum: "str(totalSum) + " Total Count: " + str(count) + " Required Average: " + str(round(totalSum/float(count), 2)))
+    	f.write("Total Sum: "str(totalSum) + " Total Count: " + str(count) + " Required Average: " + str(round(totalSum/float(count), 2)))
     
     #Save respective RDDs in a folder (may contain multiple files as work is ditributed among the slaves)
     reviewRDD.saveAsTextFile("file:///home/hduser/Desktop/DIC_Spark/reviewRDD_AvgCalc_MidResult")
