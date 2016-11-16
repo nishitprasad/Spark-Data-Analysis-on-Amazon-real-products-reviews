@@ -134,16 +134,23 @@ else
 
 ##Build Commands
 	
-For starting the master node:
-```./start-master.sh```
+- For starting the master node:
+	```
+	./start-master.sh
+	```
 
-For starting the slave nodes: (NUMBER_OF_INSTANCES = 2)
-```./start-slave.sh spark://nishit:7077``` (Can give your own Master Node URL)
+- For starting the slave nodes: (NUMBER_OF_INSTANCES = 2)
+	```
+	./start-slave.sh spark://nishit:7077 (Can give your own Master Node URL)
+	```
+- The following are the commands that shall be run for the respective files:
+	```
+	./spark-submit GroupByRatingsReviews.py
+	```
 
-The following are the commands that shall be run for the respective files:
-```./spark-submit GroupByRatingsReviews.py```
-
-```./spark-submit AverageWordsReviewCalculation.py```
+	```
+	./spark-submit AverageWordsReviewCalculation.py
+	```
 
 Please note all required files are in the same folder but the average calculation done is stored in a text file that gets saved on the current command line folder location (where these commands are getting executed)
 
