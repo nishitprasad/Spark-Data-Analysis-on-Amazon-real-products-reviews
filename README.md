@@ -41,7 +41,7 @@ else
 ```
 - The resultant RDD will be filter by removing all *None* rows.
 - Now the RDD will have only rating and respective review text.
-- ```**groupByKey()**``` is called to group this RDD's contents by rating.
+- **```groupByKey()```** is called to group this RDD's contents by rating.
 - The resultant data is saved in files as distributed by the slaves in a specified folder GroupByRatingsReview_Result.
 
 For Average words calculation, first the map function is called to replace the review RDD's contents with values of key **"```asin```"** along with respective review text word count.
@@ -58,8 +58,8 @@ else
 - The meta RDD and review RDD are joined with common values being the asin numbers
 - The resultant joined RDD will have asin numbers with respective review text word count (and a dummy value 1)
 - This joined RDD is mapped and updated with respective word counts. So the resultant joined RDD will have rows of the word counts.
-- Now the ```**reduce()**``` method is used to calculate the total sum of the word counts in the joined RDD.
-- The ```**count()**``` method is used to calculate the the total number of rows (total number of reviews).
+- Now the **```reduce()```** method is used to calculate the total sum of the word counts in the joined RDD.
+- The **```count()```** method is used to calculate the the total number of rows (total number of reviews).
 - The average is calculated via (total sum)/(total count) which is stored in a text file.
 
 
