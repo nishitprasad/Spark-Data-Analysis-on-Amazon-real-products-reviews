@@ -34,10 +34,10 @@ The prorgram AverageWordsReviewCalculation.py focuses on calculating the require
 
 For group by ratings, map function is called to mark those reviews that have word count > 100. The map function will take the following function implementation:
 ```
-	if(line json key "reviewText" has word value length > 100)
-		return (rating by the key "Overall", reviewText)
-	else
-		return None
+if(line json key "reviewText" has word value length > 100)
+	return (rating by the key "Overall", reviewText)
+else
+	return None
 ```
 - The resultant RDD will be filter by removing all *None* rows.
 - Now the RDD will have only rating and respective review text.
