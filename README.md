@@ -27,8 +27,9 @@ Spark Data Processing Program
 
 ##Summary
 
-The program **GroupByRatingsReviews.py** focuses on grouping those reviews having more than 100 words by **"Overall"** rating.
-The prorgram **AverageWordsReviewCalculation.py** focuses on calculating the required average of the review wordcount for each review belonging to **"Music"** category
+>The program **GroupByRatingsReviews.py** focuses on grouping those reviews having more than 100 words by **"Overall"** rating.
+
+>The prorgram **AverageWordsReviewCalculation.py** focuses on calculating the required average of the review wordcount for each review belonging to **"Music"** category
 
 ##Design
 
